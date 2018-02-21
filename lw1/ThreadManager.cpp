@@ -21,7 +21,7 @@ void ThreadManager::KillAll()
 
 void ThreadManager::WaitAllTasks()
 {
-	WaitForMultipleObjects(m_threadHandles.size(), m_threadHandles.data(), TRUE, 1000);
+	WaitForMultipleObjects(m_threadHandles.size(), m_threadHandles.data(), TRUE, INFINITE);
 }
 
 void ThreadManager::AddTask(LPTHREAD_START_ROUTINE func, LPVOID data)
