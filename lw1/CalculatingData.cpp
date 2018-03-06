@@ -36,14 +36,3 @@ unsigned int* CalculatingData::GetTotalNumOfDotsPtr()
 {
 	return m_numOfDotsPtr.get();
 }
-
-void CalculatingData::ChangeTotalNumOfDots(unsigned int changer)
-{
-	*m_numOfDotsPtr = *m_numOfDotsPtr + changer;
-}
-
-void CalculatingData::ChangeInCircleNumOfDots(unsigned int changer)
-{
-	(*m_numOfDotsInCirclePtr) = (*m_numOfDotsInCirclePtr) + changer;
-}
-
