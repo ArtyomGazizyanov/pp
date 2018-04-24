@@ -1,16 +1,6 @@
 #include "stdafx.h"
 #include "ThreadManager.h"
 
-
-ThreadManager::ThreadManager()
-{
-}
-
-
-ThreadManager::~ThreadManager()
-{
-}
-
 void ThreadManager::KillAll()
 {
 	for (HANDLE const& threadHandle : m_threadHandles)

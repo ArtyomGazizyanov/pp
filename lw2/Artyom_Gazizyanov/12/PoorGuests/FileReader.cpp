@@ -2,14 +2,11 @@
 #include <string>
 #include "FileReader.h"
 #include <sstream>
+
 FileReader::FileReader(string filePath)
 {
 	_filePath = filePath;
 	_fileStream = std::ifstream(_filePath);
-}
-
-FileReader::~FileReader()
-{
 }
 
 vector<unsigned int>FileReader::ReadLine()

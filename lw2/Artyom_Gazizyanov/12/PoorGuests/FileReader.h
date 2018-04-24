@@ -10,7 +10,7 @@ class FileReader
 {
 public:
 	FileReader(string filePath);
-	~FileReader();
+	~FileReader() = default;
 	vector<unsigned int> ReadLine();
 private:
 	string _filePath;

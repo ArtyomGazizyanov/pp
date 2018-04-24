@@ -8,7 +8,7 @@ class Hotel
 {
 public:
 	Hotel(std::vector<RoomType> roomTypes);
-	~Hotel();
+	~Hotel() = default;
 	std::vector<std::pair<unsigned int, unsigned int>>* GetUnoccupiedNumbers();
 private:
 	std::vector<RoomType> _roomTypes;

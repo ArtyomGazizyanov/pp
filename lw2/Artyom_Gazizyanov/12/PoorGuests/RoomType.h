@@ -1,10 +1,9 @@
 #pragma once
-#pragma once
 class RoomType
 {
 public:
 	RoomType(unsigned int roomAmmount, unsigned int price);
-	~RoomType();
+	~RoomType() = default;
 	unsigned int GetRoomAmmount();
 	unsigned int GetPrice();
 private:

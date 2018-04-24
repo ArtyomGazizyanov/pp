@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Guest.h"
 
-Guest::Guest(unsigned int money, unsigned int lifetime)
+Guest::Guest(unsigned int money, unsigned int lifetime, unsigned int id)
 {
 	if (money < 0 || lifetime == 0)
 	{
@@ -9,10 +9,7 @@ Guest::Guest(unsigned int money, unsigned int lifetime)
 	}
 	_money = money;
 	_lifeTime = lifetime;
-}
-
-Guest::~Guest()
-{
+	_id = id;
 }
 
 unsigned int Guest::GetMoney()
@@ -23,4 +20,9 @@ unsigned int Guest::GetMoney()
 unsigned int Guest::GetLifetime()
 {
 	return _lifeTime;
+}
+
+unsigned int Guest::GetId()
+{
+	return _id;
 }

@@ -19,10 +19,6 @@ Hotel::Hotel(std::vector<RoomType> roomTypes)
 	std::sort(_unoccupiedNumbers.begin(), _unoccupiedNumbers.end());
 }
 
-Hotel::~Hotel()
-{
-}
-
 std::vector<std::pair<unsigned int, unsigned int>>* Hotel::GetUnoccupiedNumbers()
 {
 	return &_unoccupiedNumbers;

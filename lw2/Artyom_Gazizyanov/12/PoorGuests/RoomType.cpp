@@ -13,10 +13,6 @@ RoomType::RoomType(unsigned int roomAmmount, unsigned int price)
 	_price = price;
 }
 
-RoomType::~RoomType()
-{
-}
-
 unsigned int RoomType::GetRoomAmmount()
 {
 	return _roomAmmount;

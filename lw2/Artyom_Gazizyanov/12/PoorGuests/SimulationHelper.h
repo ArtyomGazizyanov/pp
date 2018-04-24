@@ -1,9 +1,10 @@
 #pragma once
-#include "Hotel.h"
-#include "Guest.h"
 #include "ThreadManager.h"
 #include <vector>
 #include <Windows.h>
+#include "Guest.h"
+
+class Hotel;
 
 class SimulationHelper
 {
