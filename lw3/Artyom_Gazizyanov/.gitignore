@@ -1,0 +1,7 @@
+/**/tmp/
+/**/bin/
+/**/Debug/
+/**/x64/
+/**/Release/
+/**/.vs/
+*.vcxproj.user
