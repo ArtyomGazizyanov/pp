@@ -8,6 +8,7 @@ template <typename T>
 class BatcherLib
 {
 public:
+	static void Compexch(T& a, T& b);
 	static void Sort(std::vector<T>& vector);
 };
 
@@ -19,24 +20,34 @@ void BatcherLib<T>::Sort(std::vector<T>& vectorToSort)
 	evenSize = (int)(pow(2, logOfSize - 1));
 	while (evenSize > 0)
 	{
-		q = (int)(pow(2, logOfSize - 1));
 		leftBorder = 0;
 		rightBorder = evenSize;
-		while (q >= evenSize)
+
+		#pragma omp parallel for
+		for (q = (int)(pow(2, logOfSize - 1)); q >= evenSize; q /=2)
 		{
 			#pragma omp parallel for
 			for (int i = 0; i < (int)(vectorToSort.size() - rightBorder); i++)
 			{
 				if ((i & evenSize) == leftBorder)
 				{
-					Compexch(vectorToSort[i],vectorToSort[i + rightBorder]);
+					Compexch(vectorToSort[i], vectorToSort[i + rightBorder]);
 				}
 			}
-			
+
 			rightBorder = q - evenSize;
-			q /= 2;
 			leftBorder = evenSize;
 		}
+
 		evenSize /= 2;
+	}
+}
+
+template <typename T>
+void BatcherLib<T>::Compexch(T& a, T&b)
+{
+	if (b < a)
+	{
+		std::swap(a, b);
 	}
 }

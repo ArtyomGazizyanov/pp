@@ -33,10 +33,12 @@ int main(int argc, char * argv[])
 	long long timeElapsedInMs = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime).count();
 	
 	std::cout << "Worked : " << timeElapsedInMs << "ms" << std::endl;
-	for (auto &el : data)
+	/*for (auto &el : data)
 	{
 		std::cout << el << std::endl;
-	}
+	}*/
+
+	//std::cout << "Worked : " << timeElapsedInMs << "ms" << std::endl;
 
 	return 0;
 }
